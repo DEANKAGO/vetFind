@@ -79,19 +79,20 @@
     </div>
     <!-- .hero -->
 
-    <section class="registered-vets grey-bg full-width">
+    <section class="registeredVets grey-bg pb-4">
       <div class="registered-vets-results">
         <h3>Filter By</h3>
 
         <ul>
-          <li>
+          <!-- <li>
             <select name="sortingOrder" id="sortVets">
               <option value="">a-Z</option>
               <option value="">Z-a</option>
             </select>
-          </li>
+          </li> -->
           <li>
-            <select name="counties" id="selectCountyOfVets">
+            <select class="w-25 form-select mx-auto" name="counties" id="selectCountyOfVets">
+              <option value="" selected disabled>Select county</option>
               <option value="Nairobi">Nairobi</option>
               <option value="Mombasa">Mombasa</option>
               <option value="Kisumu">Kisumu</option>
@@ -120,8 +121,8 @@
           </li>
         </ul>
 
-        <div class="results-page">
-          <table id="topSearchResults">
+        <div class="results-page pt-4">
+          <table class="table table-sm" id="topSearchResults">
             <thead>
               <tr>
                 <th>NAME</th>
@@ -131,12 +132,6 @@
               </tr>
             </thead>
             <tbody id="registeredVetsResults">
-              <tr class="resultRow">
-                <td class="resultCell">1</td>
-                <td class="resultCell">1</td>
-                <td class="resultCell specialization">1</td>
-                <td class="resultCell">1</td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -158,7 +153,7 @@
           </div>
 
           <div class="col-md-4 secondary-info">
-            <ul>
+            <ul class="mt-md-4">
               <li><a href="">Terms of Use</a></li>
               <li><a href="" Cookie Preference></a></li>
               <li><a href="">Privacy</a></li>
@@ -166,7 +161,7 @@
           </div>
 
           <div class="col-md-4 secondary-info">
-            <ul>
+            <ul class="mt-md-4">
               <li><a href="">Our Registered Vets</a></li>
               <li><a href="">Register as a Veterinarian</a></li>
               <!-- <li><a href=""></a></li> -->
@@ -176,6 +171,7 @@
         <!--.row -->
       </div>
     </footer>
-    <script src="./js/scripts.js"></script>
+    <script type="module" src="./js/dummy-data.js"></script>
+    <script type="module" src="./js/registered-vets.js"></script>
   </body>
 </html>
