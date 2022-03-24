@@ -1,7 +1,7 @@
 # GetAVet.Ke	
 ##### By Group1: John Muiruri, Martin Muchai, Joseph Onyango, Ruth Eva Wamuyu, Lynn Nyangon, Nancy Mwende.
 
-### GetAVet.Ke	: https://deankago.github.io/vetFind/
+### GetAVet.Ke	://live-link
 
 ## Table of Content
 

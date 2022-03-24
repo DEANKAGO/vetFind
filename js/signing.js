@@ -1,3 +1,6 @@
+import { NormalUser } from "./normal-user.js";
+import { Veterinarian } from "./vet.js";
+
 const form = document.getElementById("signUp");
 const username = document.getElementById('nameUp');
 const number = document.getElementById("numberUp");
@@ -12,16 +15,6 @@ const submitSignUp = document.getElementById('signUpBtn');
 
 // });
 
-submitSignUp.addEventListener('click', e => {
-  e.preventDefault();
-
-  validateInputs();
-  
-  
-  
-});
-
-
 let pass1 = document.getElementById("password");
 let pass2 = document.getElementById("passwordUp");
 let pass3 = document.getElementById("passwordUp2");
@@ -29,6 +22,22 @@ let pass3 = document.getElementById("passwordUp2");
 let eye1 = document.getElementById("togglePassword0");
 let eye2 = document.getElementById("togglePassword1");
 let eye3 = document.getElementById("togglePassword2");
+
+submitSignUp.addEventListener('click', e => {
+  e.preventDefault();
+  if(validateInputs()){
+    let uname = username.value;
+    let phoneNo = number.value;
+    let emailAddress = email.value;
+    let passwd = password.value;
+
+    let isSignedUp = NormalUser.signUp(emailAddress, passwd, phoneNo, uname);
+    console.log(isSignedUp);
+  } 
+});
+
+
+
 
 
 function checkPassword(b,a){
@@ -110,6 +119,8 @@ const isValidEmail = email => {
 }
 
 const validateInputs = () => {
+  let isValid = false;
+
   const usernameValue = username.value.trim();
   const emailValue = email.value.trim();
   const numberValue = number.value.trim();
@@ -120,6 +131,7 @@ const validateInputs = () => {
       setError(username, 'Username is required');
   } else {
       setSuccess(username);
+      isValid = true;
   }
 
   if(emailValue === '') {
@@ -128,6 +140,7 @@ const validateInputs = () => {
       setError(email, 'Provide a valid email address');
   } else {
       setSuccess(email);
+      isValid = true;
   }
 
   if(passwordValue === '') {
@@ -136,6 +149,7 @@ const validateInputs = () => {
       setError(password, 'Password must be at least 8 character.')
   } else {
       setSuccess(password);
+      isValid = true;
   }
 
   if(password2Value === '') {
@@ -144,10 +158,10 @@ const validateInputs = () => {
       setError(password2, "Passwords doesn't match");
   } else {
       setSuccess(password2);
+      isValid = true;
   }
 
-  
-
+  return isValid;
 };
 
 const loginValidation = ()=>{
@@ -160,8 +174,13 @@ const loginValidation = ()=>{
     }
     else{
       //directs to the page matching the input passwords and email
-
-      redirectPage();
+      if(Veterinarian.login(loginMail, loginPass).auth || NormalUser.login(loginMail, loginPass).auth){
+        redirectPage();
+      } else {
+        $("div#alerts").append(
+          `<div class='col-12 col-md-8 mx-auto alert alert-danger' role='alert'>These credentials do not exist</div>`
+        )
+      }
     }
   }
 
@@ -179,3 +198,4 @@ const loginValidation = ()=>{
       $("#theName").text(addedName);
     }
   }
+
