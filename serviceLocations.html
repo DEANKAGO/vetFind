@@ -1,181 +1,244 @@
 <!DOCTYPE html>
- 
-<html lang="en">
-   <head>
-       <meta charset="UTF-8">
-       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
- 
-       <link rel="stylesheet" href="./css/styles.css">
-      
-       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-     
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-      
-       <script src="https://kit.fontawesome.com/d3d56d9400.js" crossorigin="anonymous"></script>
- 
-              
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
- 
- 
-       <title>FIND A VET KENYA</title>
- 
-   </head>
-   <body id="serviceLocationsPg">
-       <div class="top-nav">       
-           <div class="logo">
-               <a href="./index.html" style="text-decoration:none; color: #2C5371"><img src="logo.png" alt="getavetkenya">
-                   <span>Get a Vet Kenya</span></a>
-           </div>
- 
-           <div class="loginArea">                   
-               <ul class="login">
-                   <!-- <li class="vet-login" style="margin-right: 2em"> Vet Login</li> -->
-                   <a href="signing.html" style="text-decoration:none; color:#2C5371"><li class="user-login"><i class="fa-solid fa-user-plus"> <i class="fa-solid fa-right-to-bracket"></i></i> Signup / Login </li></a>
-               </ul>            
- 
-           </div> <!-- .login -->
-       </div> <!-- .top-nav-->
- 
-       <div class="main-nav">               
-           <ul>
-               <li><i class="fa-solid fa-house"></i> <a href="./index.html">HOME</a></li>
-               <li class="activePage"><i class="fa-solid fa-map-location-dot"></i> <a href="./serviceLocations.html">SERVICE LOCATIONS</a></li>
-               <li><i class="fa-solid fa-stethoscope"></i> <a href="./registeredVets.html">REGISTERED VETS</a></li>
-               <li><i class="fa-solid fa-book-open"></i> <a href="#blog">BLOG</a></li>
- 
-           </ul>          
-          
- 
-       </div>
- 
-       <div class="hero">
-           <h1>Veterinarians From All Over Kenya</h1>
-           <p>We have a diverse number of bets from many parts of the country.
-               They have varying experience in the field. Select a location to see vets near you.
- 
-           </p>
- 
-       </div> <!-- .hero -->
- 
-       <section class="vetLocationSelection full-width grey-bg">
-           <div class="container-fluid">
-               <h3 class="underlineHeadline">Select A Location to Find Vets</h3>
-               <div id="location-selectors" class="row">               
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Nairobi">Nairobi</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Mombasa">Mombasa</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Kisumu">Kisumu</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Eldoret">Eldoret</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Nakuru">Nakuru</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Thika">Thika</button></div>
-                  
-               </div>
-               <div id="location-selectors" class="row">               
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6" ><button class="county-btn" id="Naivasha">Naivasha</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Garisa">Garisa</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Nyeri">Nyeri</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Malindi">Malindi</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Machakos">Machakos</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Homabay">Homabay</button></div>
-                  
-               </div>
-               <div id="location-selectors" class="row">               
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Kisii">Kisii</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Limuru">Limuru</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6" ><button class="county-btn" id="AthiRiver">AthiRiver</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Nyandarua">Nyandarua</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Makueni">Makueni</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Kiambu">Kiambu</button></div>
-                  
-               </div>
-               <div id="location-selectors" class="row">               
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Turkana">Turkana</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="WestPokot">WestPokot</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Trans Nzoia">Trans Nzoia</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Kilifi">Kilifi</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Kitui">Kitui</button></div>
-                   <div class="county-location col-lg-2 col-md-3 col-sm-6"><button class="county-btn" id="Meru">Meru</button></div>
-                  
-               </div>
-           </div> <!--container-->
-       </section> <!-- .vetLocationSelection -->
-       <section class="registered-vets full-width">           
-           <h3 class="underlineHeadline">Vets in <span id="selectedLocation"></span></h3>
-           <div class="results-page">
-               <table>
-                   <thead>
-                       <tr>
-                           <th>NAME</th>
-                           <th>LOCATION</th>
-                           <th>SPECIALIZATION</th>
-                           <th>CONTACT</th>
- 
-                       </tr>
-                   </thead>
-                   <tbody id="registeredVetsResults">
-                       <tr class="resultRow">
-                           <td class="resultCell">1</td>
-                           <td class="resultCell">1</td>
-                           <td class="resultCell specialization">1</td>
-                           <td class="resultCell">1</td>
-                       </tr>
- 
-                   </tbody>
- 
-               </table>
- 
-           </div>  
- 
- 
-       </section> <!-- .registered-vets -->
- 
-       <footer class="half-height">
-           <div class="container">
-               <div class="row">
-                   <div class="col-md-4 secondary-info">
-                       <h4>Contact Us</h4>
-                       <ul>
-                           <li>088 992 992<li>
-                           <li>One West Towers Westlands, Nairobi<li>
-                          
-      
-                       </ul>
-                   </div>
- 
-                   <div class="col-md-4 secondary-info">
-                       <ul>
-                           <li><a href="">Terms of Use</a></li>
-                           <li><a href=""Cookie Preference></a></li>
-                           <li><a href="">Privacy</a></li>
-      
-                       </ul>
-                   </div>
- 
-                   <div class="col-md-4 secondary-info">
-                       <ul>
-                           <li><a href="">Our Registered Vets</a></li>
-                           <li><a href="">Register  as a Veterinarian</a></li>
-                           <!-- <li><a href=""></a></li> -->
-                       </ul>
-      
-                   </div>
-      
-                  
-               </div> <!--.row -->
- 
- 
-           </div>
- 
- 
-          
-          
-          
-       </footer>
-       <script src="./js/scripts.js"></script>
-      
-   </body>
-</html>
 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://kit.fontawesome.com/d3d56d9400.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>FIND A VET KENYA</title>
+  </head>
+  <body id="serviceLocationsPg">
+    <div class="top-nav">
+      <div class="logo">
+        <a href="./index.html" style="text-decoration: none; color: #2c5371"
+          ><img src="logo.png" alt="getavetkenya" />
+          <span>Get a Vet Kenya</span></a
+        >
+      </div>
+
+      <div class="loginArea">
+        <ul class="login">
+          <!-- <li class="vet-login" style="margin-right: 2em"> Vet Login</li> -->
+          <a href="signing.html" style="text-decoration: none; color: #2c5371"
+            ><li class="user-login">
+              <i class="fa-solid fa-user-plus">
+                <i class="fa-solid fa-right-to-bracket"></i
+              ></i>
+              Signup / Login
+            </li></a
+          >
+        </ul>
+      </div>
+      <!-- .login -->
+    </div>
+    <!-- .top-nav-->
+
+    <div class="main-nav">
+      <ul>
+        <li>
+          <i class="fa-solid fa-house"></i> <a href="./index.html">HOME</a>
+        </li>
+        <li class="activePage">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <a href="./serviceLocations.html">SERVICE LOCATIONS</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-stethoscope"></i>
+          <a href="./registeredVets.html">REGISTERED VETS</a>
+        </li>
+        <li><i class="fa-solid fa-book-open"></i> <a href="#blog">BLOG</a></li>
+      </ul>
+    </div>
+
+    <div class="hero">
+      <h1>Veterinarians From All Over Kenya</h1>
+      <p>
+        We have a diverse number of bets from many parts of the country. They
+        have varying experience in the field. Select a location to see vets near
+        you.
+      </p>
+    </div>
+    <!-- .hero -->
+
+    <section class="vetLocationSelection full-width grey-bg">
+      <div class="container-fluid">
+        <h3 class="underlineHeadline">Select A Location to Find Vets</h3>
+
+        <!-- Changes for Lynn:-->
+        <!-- added id to the div classes and made the ids of buttons to end with Btn-->
+        <div id="location-selectors" class="row">
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Nairobi">
+            <button class="county-btn" id="NairobiBtn">Nairobi</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Mombasa">
+            <button class="county-btn" id="MombasaBtn">Mombasa</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Kisumu">
+            <button class="county-btn" id="KisumuBtn">Kisumu</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Eldoret">
+            <button class="county-btn" id="EldoretBtn">Eldoret</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Nakuru">
+            <button class="county-btn" id="NakuruBtn">Nakuru</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Thika">
+            <button class="county-btn" id="ThikaBtn">Thika</button>
+          </div>
+        </div>
+        <div id="location-selectors" class="row">
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Naivasha">
+            <button class="county-btn" id="NivashaBtn">Naivasha</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Garisa">
+            <button class="county-btn" id="GarisaBtn">Garisa</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Nyeri">
+            <button class="county-btn" id="NyeriBtn">Nyeri</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Malindi">
+            <button class="county-btn" id="MalindiBtn">Malindi</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Machakos">
+            <button class="county-btn" id="MachakosBtn">Machakos</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Homabay">
+            <button class="county-btn" id="HomabayBtn">Homabay</button>
+          </div>
+        </div>
+        <div id="location-selectors" class="row">
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Kisii">
+            <button class="county-btn" id="KisiiBtn">Kisii</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Limuru">
+            <button class="county-btn" id="LimuruBtn">Limuru</button>
+          </div>
+          <div
+            class="county-location col-lg-2 col-md-3 col-sm-6"
+            id="AthiRiver"
+          >
+            <button class="county-btn" id="AthiRiverBtn">AthiRiver</button>
+          </div>
+          <div
+            class="county-location col-lg-2 col-md-3 col-sm-6"
+            id="Nyandarua"
+          >
+            <button class="county-btn" id="NyandaruaBtn">Nyandarua</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Makueni">
+            <button class="county-btn" id="MakueniBtn">Makueni</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Kiambu">
+            <button class="county-btn" id="KiambuBtn">Kiambu</button>
+          </div>
+        </div>
+        <div id="location-selectors" class="row">
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Turkana">
+            <button class="county-btn" id="TurkanaBtn">Turkana</button>
+          </div>
+          <div
+            class="county-location col-lg-2 col-md-3 col-sm-6"
+            id="WestPokot"
+          >
+            <button class="county-btn" id="WestPokotBtn">WestPokot</button>
+          </div>
+          <div
+            class="county-location col-lg-2 col-md-3 col-sm-6"
+            id="TransNzoia"
+          >
+            <button class="county-btn" id="TransNzoiaBtn">Trans Nzoia</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Kilifi">
+            <button class="county-btn" id="KilifiBtn">Kilifi</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Kitui">
+            <button class="county-btn" id="KituiBtn">Kitui</button>
+          </div>
+          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Meru">
+            <button class="county-btn" id="MeruBtn">Meru</button>
+          </div>
+        </div>
+      </div>
+      <!--container-->
+    </section>
+    <!-- .vetLocationSelection -->
+    <section class="registered-vets full-width">
+      <h3 class="underlineHeadline">
+        Vets in <span id="selectedLocation"></span>
+      </h3>
+      <div class="results-page">
+        <table>
+          <thead>
+            <tr>
+              <th>NAME</th>
+              <th>LOCATION</th>
+              <th>SPECIALIZATION</th>
+              <th>CONTACT</th>
+            </tr>
+          </thead>
+          <tbody id="results-by-county">
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- .registered-vets -->
+
+    <footer class="half-height">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 secondary-info">
+            <h4>Contact Us</h4>
+            <ul>
+              <li>088 992 992</li>
+              <li></li>
+              <li>One West Towers Westlands, Nairobi</li>
+              <li></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 secondary-info">
+            <ul>
+              <li><a href="">Terms of Use</a></li>
+              <li><a href="">Cookie Preference></a></li>
+              <li><a href="">Privacy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 secondary-info">
+            <ul>
+              <li><a href="">Our Registered Vets</a></li>
+              <li><a href="">Register as a Veterinarian</a></li>
+              <!-- <li><a href=""></a></li> -->
+            </ul>
+          </div>
+        </div>
+        <!--.row -->
+      </div>
+    </footer>
+    <script type="module" src="./js/dummy-data.js"></script>
+    <script type="module" src="./js/service-location.js"></script>
+  </body>
+</html>

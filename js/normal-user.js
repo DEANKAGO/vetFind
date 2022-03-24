@@ -1,8 +1,8 @@
 import {User} from './user.js';
 
 class NormalUser extends User {
-  constructor(email, password, username, role, profile){
-    super(email, password, username, role, profile);
+  constructor(email, password, phoneNumber, username, role, profile){
+    super(email, password, phoneNumber, username, role, profile);
   }
 
   /**
@@ -14,6 +14,7 @@ class NormalUser extends User {
       id: super.id,
       email: this.email,
       password: this.password,
+      phoneNumber: this.phoneNumber,
       username: this.username,
       role: this.role,
       profile: this.profile
@@ -24,13 +25,14 @@ class NormalUser extends User {
    * Function to sign up a normal user
    * @param {*} email A normal user's email
    * @param {*} password A normal user's password
+   * @param {*} phoneNumber A normal user's phone number
    * @param {*} username A normal user's username
    * @returns Whether sign up was successful
    */
-  static signUp(email, password, username){
+  static signUp(email, password, phoneNumber, username){
     const NORMAL_USER_ROLE = 2;
-    let normalUser = new NormalUser(email, password, username, NORMAL_USER_ROLE, {});
-    return super.signUp(normalUser.email, normalUser.password, normalUser.username, normalUser.role, normalUser.profile);
+    let normalUser = new NormalUser(email, password, phoneNumber, username, NORMAL_USER_ROLE, {});
+    return super.signUp(normalUser.email, normalUser.password, normalUser.phoneNumber, normalUser.username, normalUser.role, normalUser.profile);
   }
 
   /**

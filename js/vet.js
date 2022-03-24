@@ -3,8 +3,8 @@ import {database} from './database.js';
 import { VetProfile } from './vet-profile.js';
 
 class Veterinarian extends User {
-  constructor(email, password, username, role){
-    super(email, password, username, role, new VetProfile());
+  constructor(email, password, phoneNumber, username, role){
+    super(email, password, phoneNumber, username, role, new VetProfile());
   }
 
   /**
@@ -16,6 +16,7 @@ class Veterinarian extends User {
       id: super.id,
       email: this.email,
       password: this.password,
+      phoneNumber: this.phoneNumber,
       username: this.username,
       role: this.role,
       profile: this.profile
@@ -29,10 +30,10 @@ class Veterinarian extends User {
    * @param {*} username Vet's username
    * @returns Whether sign up was successful
    */
-  static signUp(email, password, username){
+  static signUp(email, password, phoneNumber, username){
     const VET_ROLE = 1;
-    let vet = new Veterinarian(email, password, username, VET_ROLE, {});
-    return super.signUp(vet.email, vet.password, vet.username, vet.role, vet.profile);
+    let vet = new Veterinarian(email, password, phoneNumber, username, VET_ROLE, {});
+    return super.signUp(vet.email, vet.password, vet.phoneNumber, vet.username, vet.role, vet.profile);
   }
 
   /**
@@ -71,11 +72,7 @@ class Veterinarian extends User {
     .sort((vet1, vet2) => vet2.profile.rating - vet1.profile.rating);
 
     // Return a filtered list of vets if any
-    if(vetsByCounty.length > 0){
-      return vetsByCounty;
-    } else {
-      console.log("No vets found");
-    }
+    return vetsByCounty;
   }
 
   /**
@@ -92,11 +89,7 @@ class Veterinarian extends User {
     .sort((vet1, vet2) => vet2.profile.rating - vet1.profile.rating);
 
     // Return a filtered list of vets if any
-    if(vetsByAnimal.length > 0){
-      return vetsByAnimal;
-    } else {
-      console.log("No vets found");
-    }
+    return vetsByAnimal;
   }
 
   /**
@@ -114,11 +107,7 @@ class Veterinarian extends User {
     .sort((vet1, vet2) => vet2.profile.rating - vet1.profile.rating);
 
     // Return a filtered list of vets if any
-    if(vetsByCountyAndAnimal.length > 0){
-      return vetsByCountyAndAnimal;
-    } else {
-      console.log("No vets found");
-    }
+    return vetsByCountyAndAnimal;
   }
 
 }

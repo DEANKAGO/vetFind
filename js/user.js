@@ -4,10 +4,11 @@ class User {
   // No of users
   static count = 1;
 
-  constructor(email, password, username, role, profile){
+  constructor(email, password, phoneNumber="", username, role, profile){
     this.id = this.constructor.count++;
     this.email = email;
     this.password = password;
+    this.phoneNumber = phoneNumber;
     this.username = username;
     this.role = role;
     this.profile = profile;
@@ -17,6 +18,7 @@ class User {
     return {
       id: this.id, 
       email: this.email, 
+      phoneNumber: this.phoneNumber,
       password: this.password, 
       username: this.username
     };
@@ -67,9 +69,9 @@ class User {
    * @param {*} role User's role 
    * @returns Whether sign up was successful
    */
-  static signUp(email, password, username, role, profile){
+  static signUp(email, password, phoneNumber, username, role, profile){
     // Create user
-    let user = new User(email, password, username, role, profile);
+    let user = new User(email, password, phoneNumber, username, role, profile);
     const VET_ROLE = 1;
     const USER_ROLE = 2; 
     let isSignedUp = false;
@@ -97,6 +99,9 @@ class User {
       default:
         console.log("Role does not exist"); 
     }
+
+    localStorage.setItem("database", JSON.stringify(database.getDatabase()));
+    console.log(localStorage.getItem("database"));
     return isSignedUp;
   }
 

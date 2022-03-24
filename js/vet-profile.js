@@ -1,11 +1,10 @@
 let fullName = 'fullName';
 
 class VetProfile {
-  constructor(firstName = "", lastName = "", telephoneNo = "", specialization = {animals: [], services: []}, workingRate = "", serviceArea = {location: "",county: "",vetHospital:""}, rating = 0){
+  constructor(firstName = "", lastName = "", specialization = {animals: [], services: []}, workingRate = "", serviceArea = {location: "",county: "",vetHospital:""}, rating = 0){
     this.firstName = firstName;
     this.lastName = lastName;
     this.fullName = this.fullName;
-    this.telephoneNo = telephoneNo;
     this.specialization = specialization
     this.workingRate = workingRate;
     this.serviceArea = serviceArea;
@@ -35,7 +34,6 @@ class VetProfile {
   getVetProfileData(){
     return {
       name: this.fullName,
-      telephoneNo: this.telephoneNo,
       specialization: this.specialization,
       workingRate: this.workingRate,
       serviceArea: this.serviceArea,
