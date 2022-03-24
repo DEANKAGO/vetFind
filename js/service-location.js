@@ -5,6 +5,8 @@ $(document).ready(function () {
     let countyLocation = $(this).attr("id");
     $("#selectedLocation").text(countyLocation);
     console.log(countyLocation);
+    // Read from data store
+    $(".registered-vets").toggle(2000);
     // alert("Here are the vets in " + countyLocation);
 
     let vetsByCounty = Veterinarian.getVetsByCounty(countyLocation);
