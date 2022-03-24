@@ -83,14 +83,14 @@
     </div>
     <!-- .hero -->
 
-    <section class="vetLocationSelection full-width grey-bg">
-      <div class="container-fluid">
+    <section class="vetLocationSelection grey-bg">
+      <div class="container-fluid pb-5 px-4">
         <h3 class="underlineHeadline">Select A Location to Find Vets</h3>
 
         <!-- Changes for Lynn:-->
         <!-- added id to the div classes and made the ids of buttons to end with Btn-->
-        <div id="location-selectors" class="row">
-          <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Nairobi">
+        <div id="location-selectors" class="row gx-5">
+          <div class="county-location col-lg-2 col-md-3" id="Nairobi">
             <button class="county-btn" id="NairobiBtn">Nairobi</button>
           </div>
           <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Mombasa">
@@ -109,7 +109,7 @@
             <button class="county-btn" id="ThikaBtn">Thika</button>
           </div>
         </div>
-        <div id="location-selectors" class="row">
+        <div id="location-selectors" class="row gx-5">
           <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Naivasha">
             <button class="county-btn" id="NivashaBtn">Naivasha</button>
           </div>
@@ -129,7 +129,7 @@
             <button class="county-btn" id="HomabayBtn">Homabay</button>
           </div>
         </div>
-        <div id="location-selectors" class="row">
+        <div id="location-selectors" class="row gx-5">
           <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Kisii">
             <button class="county-btn" id="KisiiBtn">Kisii</button>
           </div>
@@ -155,7 +155,7 @@
             <button class="county-btn" id="KiambuBtn">Kiambu</button>
           </div>
         </div>
-        <div id="location-selectors" class="row">
+        <div id="location-selectors" class="row gx-5">
           <div class="county-location col-lg-2 col-md-3 col-sm-6" id="Turkana">
             <button class="county-btn" id="TurkanaBtn">Turkana</button>
           </div>
@@ -185,17 +185,17 @@
       <!--container-->
     </section>
     <!-- .vetLocationSelection -->
-    <section class="registered-vets full-width">
-      <h3 class="underlineHeadline">
+    <section class="registered-vets pt-3 pb-5">
+      <h3 class="underlineHeadline text-center">
         Vets in <span id="selectedLocation"></span>
       </h3>
       <div class="results-page">
-        <table>
+        <table class="table table-sm">
           <thead>
             <tr>
               <th>NAME</th>
               <th>LOCATION</th>
-              <th>SPECIALIZATION</th>
+              <th>CATEGORY</th>
               <th>CONTACT</th>
             </tr>
           </thead>
@@ -220,7 +220,7 @@
           </div>
 
           <div class="col-md-4 secondary-info">
-            <ul>
+            <ul class="mt-md-4">
               <li><a href="">Terms of Use</a></li>
               <li><a href="">Cookie Preference></a></li>
               <li><a href="">Privacy</a></li>
@@ -228,7 +228,7 @@
           </div>
 
           <div class="col-md-4 secondary-info">
-            <ul>
+            <ul class="mt-md-4">
               <li><a href="">Our Registered Vets</a></li>
               <li><a href="">Register as a Veterinarian</a></li>
               <!-- <li><a href=""></a></li> -->
